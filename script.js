@@ -35,7 +35,7 @@ function setValue(){
 
     let requestURL = `https://api.exchangerate.host/convert?from=${fromCurr}&to=${toCurr}&amount=${amount}`;
     let request = new XMLHttpRequest();
-    request.open('GET', requestURL, amount=1200);
+    request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
 
