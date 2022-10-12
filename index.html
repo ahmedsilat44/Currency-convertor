@@ -12,23 +12,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+  " defer></script>
     <title>Currency Convert</title>
 </head>
 <body>
-  <h1 id="heading">AED TO PKR</h1>
+  
 
   <div class="container">
 
-    <div class="select">
-      <select id="selectbox"></select>
+    <div class="card">
+      
+      <h2 id="heading" class="m-1">AED TO PKR</h1>
 
-      <select id="selectbox2"></select>
+      <select id="selectbox" class="form-select m-2 text-center">
+        <option selected hidden>From</option>
+      </select>
 
-      <input type="number" placeholder="1" id="amount">
+      <select id="selectbox2" class="form-select m-2 text-md-center">
+        <option selected hidden>To</option>
+      </select>
 
-      <button onclick=setValue()>Set Value</button>
+      <input type="number" placeholder="1" id="amount" class="input m-2 text-center">
 
-      <h3 id="h3"></h3>
+      <h4 id="h3" class="m-2"><strong></strong></h4>
+
+      <button onclick=setValue() class="btn btn-outline-primary m-1">Set Value</button>
     </div>
 
 
