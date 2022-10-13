@@ -33,18 +33,20 @@ function setValue(){
     let toCurr = toInput.value;
     let amount = amountInput.value;
 
-    let requestURL = `https://api.exchangerate.host/convert?from=${fromCurr}&to=${toCurr}&amount=${amount}`;
-    let request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.responseType = 'json';
-    request.send();
+    if(fromCurr != "null" && toCurr != "null"){
+      let requestURL = `https://api.exchangerate.host/convert?from=${fromCurr}&to=${toCurr}&amount=${amount}`;
+      let request = new XMLHttpRequest();
+      request.open('GET', requestURL);
+      request.responseType = 'json';
+      request.send();
 
-    request.onload = function() {
-        const h3 = document.getElementById('h3');
-        const head = document.getElementById('heading');
-        head.innerText = fromCurr + " TO " + toCurr;
-        let response = request.response;
-        h3.innerText = (Math.floor(parseFloat(response.result)*100)/100);
+      request.onload = function() {
+          const h3 = document.getElementById('h3');
+          const head = document.getElementById('heading');
+          head.innerText = fromCurr + " TO " + toCurr;
+          let response = request.response;
+          h3.innerText = (Math.floor(parseFloat(response.result)*100)/100);
+      }
     }
 }
 
