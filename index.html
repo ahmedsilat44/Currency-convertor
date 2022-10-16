@@ -23,18 +23,25 @@
   <div class="container">
 
     <div class="card">
-      
-      <h1 id="heading" class="m-1">Enter Amount</h1>
 
-      <select id="selectbox" class="form-select m-2 text-center w-75">
-        <option selected hidden value="null">From</option>
-      </select>
+      <h1 id="heading" class="m-1">Currency Converter</h1>
 
-      <select id="selectbox2" class="form-select m-2 text-center w-75">
-        <option selected hidden value="null">To</option>
-      </select>
+      <div class="form-floating m-2 text-center w-75">
+        <select id="selectbox" class="form-select m-2 w-100">
+        </select>
+        <label for="selectbox">Currency From</label>
+      </div>
 
-      <input type="number" placeholder="1" id="amount" class="input m-2 text-center w-50">
+      <div class="form-floating m-2 text-center w-75">
+        <select id="selectbox2" class="form-select m-2 w-100">
+        </select>
+        <label for="selectbox2">Currency To</label>
+      </div>
+
+      <form class="form-floating align-items-center w-50">
+        <input type="number" class="form-control" id="amount" placeholder="1" value="1">
+        <label for="amount">Amount</label>
+      </form>
 
       <h4 id="h3" class="m-2"><strong></strong></h4>
 
